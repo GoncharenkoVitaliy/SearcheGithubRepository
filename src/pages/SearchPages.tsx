@@ -7,7 +7,7 @@ import useDebounce from "../hooks/useDebounce";
 import Loading from "../UI/Loading/Loading";
 import RepoCard from "../components/RepoCard";
 
-export default function HomePages() {
+export default function SearchPages() {
   const [search, setSearch] = useState("");
   const [dropdown, setDropdown] = useState(false);
   const debounced = useDebounce(search, 1000);
@@ -33,19 +33,19 @@ export default function HomePages() {
       {isError && (
         <p className="text-center text-red-600">Something went wrong...</p>
       )}
-      <div className="relative w-[560px]">
-        <form className="flex flex-col items-center">
+      <div className="relative">
+        <form className="flex flex-col ">
           <input
             name="enter"
             type="text"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="border py-2 px-4 w-4/5 h-[42px] mb-2 mx-auto active:shadow-md active:bg-gray-100 border-md sm:w-full"
+            className="border py-2 px-4 h-[42px] mb-2 mx-auto active:shadow-md active:bg-gray-100 border-md w-full max-[570px]:w-11/12"
             placeholder="Search for Github username . . ."
           />
         </form>
         {dropdown && (
-          <ul className="mx-auto absolute top-[44px] w-4/5 left-0 right-0 max-h-[300px] overflow-y-scroll shadow-md bg-white sm:w-full">
+          <ul className="mx-0 px-0 absolute top-[44px] max-h-[300px] overflow-y-scroll mx-auto shadow-md bg-white w-full max-[570px]:w-11/12:ml-5">
             {isLoading && <p className="text-center">{<Loading />}</p>}
             {data?.map((user) => (
               <li
@@ -53,7 +53,7 @@ export default function HomePages() {
                 onClick={() => {
                   clickHandler(user.login);
                 }}
-                className="list-none py-2 px-4 hover:bg-gray-200 hover:text-gray-600 transition-colors cursor-pointer w-[560px]"
+                className="list-none py-2 px-4  hover:bg-gray-200 hover:text-gray-600 transition-colors cursor-pointer"
               >
                 {user.login}
               </li>

@@ -1,17 +1,17 @@
 import { Route, Routes } from "react-router-dom";
-import HomePages from "./pages/HomePages";
+import SearchPages from "./pages/SearchPages";
 import FavouritesPage from "./pages/FavouritesPage";
 import Navigation from "./components/Navigation";
 
 function App() {
   return (
-    <>
+    <div className="flex flex-col mx-0 px-0 w-full  bg-gray-300">
       <Navigation />
       <Routes>
-        <Route path='/' element={<HomePages />} />
-        <Route path='/favourites' element={<FavouritesPage />} />
+        <Route path="/" element={<SearchPages />} />
+        <Route path="/favourites" element={<FavouritesPage />} />
       </Routes>
-    </>
+    </div>
   );
 }
 
