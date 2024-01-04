@@ -16,7 +16,7 @@ export default function FavouritesPage() {
             <a
               href={f}
               target="_blank"
-              className="block py-5 px-5 w-auto mb-4 max-[501px]:text-sm max-[436px]:text-xs font-size:'calc(5px+11*(100vw/1024))'"
+              className="block py-5 px-5 w-auto mb-4 max-[501px]:text-sm max-[436px]:text-xs"
             >
               {index + 1}. {f.substring(f.lastIndexOf('/') + 1)}
             </a>
