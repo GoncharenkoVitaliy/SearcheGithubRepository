@@ -29,7 +29,7 @@ export default function SearchPages() {
   };
 
   return (
-    <div className="flex flex-col items-center fd-column pt-10 mx-auto min-h-screen w-screen bg-gray-200">
+    <div className="flex flex-col items-center fd-column pt-10 mx-auto h-full w-screen bg-gray-200">
       {isError && (
         <p className="text-center text-red-600">Something went wrong...</p>
       )}
