@@ -13,7 +13,7 @@ export default function FavouritesPage() {
             key={f}
             className="shadow-md hover:shadow-lg hover:shadow-white hover:bg-slate-200 bg-slate-300 w-auto mb-4 rounded"
           >
-            <a href={f} target="_blank" className="block py-5 px-5 w-auto mb-4 max-[501px]:text-sm max-[436px]:text-xs">
+            <a href={f} target="_blank" className="block py-5 px-5 w-auto mb-4 max-[501px]:text-sm max-[436px]:text-xs font-size:'calc(5px+11*(100vw/1024))'">
               {index + 1}. {f}
             </a>
           </li>
